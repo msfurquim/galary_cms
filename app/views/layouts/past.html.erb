@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+  <body id='past_page'>
+    <%= site_bar -%>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <div id="page_container">
+      <header id="header">
+        <%= render '/refinery/header' -%>
+      </header>
+      <section id="page">
+        <div id="left-body">
+          <h2>past/旧的</h2>
+          <dl>
+            <dt>2012</dt>
+            <dd>
+              Konstantin Bayer -
+              Grand Opening -
+              at IF Fair -
+              Groupexhibition -
+              Wang Yu Hong -
+            </dd> 
+            <dt>2011</dt>
+            <dd></dd>
+            <dt>2010</dt>
+            <dd></dd>  
+          </dl>
+        </div>
+        <div id="mid-body">
+          <%= @page.content_for(:body).html_safe %>
+        </div>
+        <%= render :partial => '/widgets/right_body' %>
+      </section>
+      <%= render '/refinery/footer' -%>
+    </div>
+    <%= render '/refinery/javascripts' %>
+  </body>
+</html>

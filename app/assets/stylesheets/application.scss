@@ -1,0 +1,155 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+body {
+  font-family: Verdana, Arial, sans-serif;;
+  font-size: 13px;
+  line-height: 18px;
+}
+a:link, a:visited{
+  color: #000;
+  text-decoration: none;
+}
+a:hover, a:active{
+  color: #000;
+  text-decoration: underline;
+}
+ul{
+  list-style: none;
+}
+#page_container{
+  width: 1080px;
+  margin: 0 auto;
+  /*background: #eee;*/
+}
+#body_content {
+  float: left;
+  width: 100%;
+  background: white;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+#menu ul {
+  padding: 0px;
+  display: inline-block;
+  margin-left: 200px;
+  li {
+    float: left;
+    margin-right: 10px;
+    a {
+      display: block;
+      padding: 5px 10px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    &.selected a, a:hover {
+      background: #CCC;
+    }
+  }
+}
+footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 11px;
+  p {
+    margin: 0;
+  }
+}
+#page{
+  display: inline-block;
+}
+#left-body{
+  float: left;
+  width: 150px;
+  dl {
+    text-align: right;
+    dt{
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  }
+}
+#mid-body {
+  width: 650px;
+  margin-left: 40px;
+  float: left;
+  line-height: 22px;
+  display: inline-block;
+}
+#right-body {
+  float: right;
+  width: 200px;
+}
+ul#join{
+  /*text-align: right;*/
+  li{
+    margin-bottom: 5px;
+  }
+}
+#facebook_icon, #twitter_icon{
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+}
+#facebook_icon{
+  background: url(/assets/facebook-48.png);
+}
+#twitter_icon{
+  background: url(/assets/twitter-48.png);
+}
+/********************* home *********************/
+#home {
+  #logo {
+    margin: 200px 0 50px;
+    text-align: center;
+    img {
+      width: 500px;
+      height: 300px;
+    }
+  }
+  #web_link {
+    font-size: 15px;
+    margin-bottom: 50px;
+    a{
+      display: inline-block;
+    }
+     a:first-child {
+      margin-left: 240px;
+      width: 380px;
+    }
+  }
+}
+/********************* current & past*********************/
+.pic{
+  float: left;
+  display: inline-block;
+  margin-right: 20px;
+}
+.around_text{
+  float: left;
+  display: inline-block;
+}
+
+/********************* past *********************/
+#past_page{
+  #left-body{
+    dl {
+      dt{
+        font-size: 16px;
+        text-align: left;
+        margin-left: 20px;
+      }
+    }
+  }
+}
