@@ -1,0 +1,31 @@
+sk:
+  refinery:
+    plugins:
+      catalogues:
+        title: Catalogues
+    catalogues:
+      admin:
+        catalogues:
+          actions:
+            create_new: Pridať Catalogue
+            reorder: Preusporiadať Catalogues
+            reorder_done: Koniec radenia Catalogues
+          records:
+            title: Catalogues
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Catalogues. Kliknite na "Pridať Catalogue" pre pridanie prvého catalogue.
+          catalogue:
+            view_live_html: Zobraziť náhľad catalogue<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť catalogue
+            delete: Zmazať catalogue
+      catalogues:
+        show:
+          other: Daľšie Catalogues
+  activerecord:
+    attributes:
+      'refinery/catalogues/catalogue':
+        author: Author
+        caption: Caption
+        year: Year
+        cover: Cover
+        attach: Attach

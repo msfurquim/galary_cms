@@ -1,0 +1,32 @@
+es:
+  refinery:
+    plugins:
+      catalogues:
+        title: Catalogues
+#        article: masculino/femenino
+    catalogues:
+      admin:
+        catalogues:
+          actions:
+            create_new: Crear nuevo catalogue
+            reorder: Reordenar catalogues
+            reorder_done: Reordenación de catalogues completada
+          records:
+            title: Catalogues
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay catalogues todavía. Pulsa en "Crear nuevo Catalogue" para crear tu primer catalogue.
+          catalogue:
+            view_live_html: Ver este catalogue como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este catalogue
+            delete: Borrar este catalogue para siempre
+      catalogues:
+        show:
+          other: Otros catalogues
+  activerecord:
+    attributes:
+      'refinery/catalogues/catalogue':
+        author: Author
+        caption: Caption
+        year: Year
+        cover: Cover
+        attach: Attach

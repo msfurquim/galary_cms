@@ -1,0 +1,31 @@
+en:
+  refinery:
+    plugins:
+      catalogues:
+        title: Catalogues
+    catalogues:
+      admin:
+        catalogues:
+          actions:
+            create_new: Add New Catalogue
+            reorder: Reorder Catalogues
+            reorder_done: Done Reordering Catalogues
+          records:
+            title: Catalogues
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Catalogues yet. Click "Add New Catalogue" to add your first catalogue.
+          catalogue:
+            view_live_html: View this catalogue live <br/><em>(opens in a new window)</em>
+            edit: Edit this catalogue
+            delete: Remove this catalogue forever
+      catalogues:
+        show:
+          other: Other Catalogues
+  activerecord:
+    attributes:
+      'refinery/catalogues/catalogue':
+        author: Author
+        caption: Caption
+        year: Year
+        cover: Cover
+        attach: Attach

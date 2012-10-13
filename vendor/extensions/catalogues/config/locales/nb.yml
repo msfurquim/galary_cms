@@ -1,0 +1,31 @@
+nb:
+  refinery:
+    plugins:
+      catalogues:
+        title: Catalogues
+    catalogues:
+      admin:
+        catalogues:
+          actions:
+            create_new: Lag en ny Catalogue
+            reorder: Endre rekkefølgen på Catalogues
+            reorder_done: Ferdig å endre rekkefølgen Catalogues
+          records:
+            title: Catalogues
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Catalogues enda. Klikk på "Lag en ny Catalogue" for å legge til din første catalogue.
+          catalogue:
+            view_live_html: Vis hvordan denne catalogue ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne catalogue
+            delete: Fjern denne catalogue permanent
+      catalogues:
+        show:
+          other: Andre Catalogues
+  activerecord:
+    attributes:
+      'refinery/catalogues/catalogue':
+        author: Author
+        caption: Caption
+        year: Year
+        cover: Cover
+        attach: Attach

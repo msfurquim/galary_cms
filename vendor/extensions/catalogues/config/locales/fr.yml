@@ -1,0 +1,31 @@
+fr:
+  refinery:
+    plugins:
+      catalogues:
+        title: Catalogues
+    catalogues:
+      admin:
+        catalogues:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Catalogue
+            reorder: Réordonner les Catalogues
+            reorder_done: Fin de réordonnancement des Catalogues
+          records:
+            title: Catalogues
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Catalogue. Cliquer sur "Créer un(e) nouve(au/l/lle) Catalogue" pour créer votre premi(er/ère) catalogue.'
+          catalogue:
+            view_live_html: Voir ce(t/tte) catalogue <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) catalogue
+            delete: Supprimer définitivement ce(t/tte) catalogue
+      catalogues:
+        show:
+          other: Autres Catalogues
+  activerecord:
+    attributes:
+      'refinery/catalogues/catalogue':
+        author: Author
+        caption: Caption
+        year: Year
+        cover: Cover
+        attach: Attach

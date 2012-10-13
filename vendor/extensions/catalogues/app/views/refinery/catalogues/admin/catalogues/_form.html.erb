@@ -1,0 +1,48 @@
+<%= form_for [refinery, :catalogues_admin, @catalogue] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @catalogue,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :author -%>
+    <%= f.text_field :author, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :caption -%>
+    <%= f.text_field :caption  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :year -%>
+    <%= f.text_field :year  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :cover -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :cover_id,
+               :image => @catalogue.cover,
+               :toggle_image_display => false %>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :attach -%>
+    <%= render '/refinery/admin/resource_picker',
+               :f => f,
+               :field => :attach_id,
+               :resource => @catalogue.attach %>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.catalogues.admin.catalogues.catalogue'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @catalogue.author) %>
+<% end -%>

@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121002035631) do
+ActiveRecord::Schema.define(:version => 20121013032228) do
+
+  create_table "refinery_catalogues", :force => true do |t|
+    t.string   "author"
+    t.string   "caption"
+    t.string   "year"
+    t.integer  "cover_id"
+    t.integer  "attach_id"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
