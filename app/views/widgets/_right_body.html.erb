@@ -3,13 +3,18 @@
     <img src="/assets/logo.gif" alt="木宅画廊" /> 
   </a>
   <!-- In a view with a dropdown -->
-  <ul class="dropdown-menu">
-    <% Refinery::I18n.frontend_locales.each do |frontend_locale| %>
-      <li>
-        <%= link_to Refinery::I18n.locales[frontend_locale], {:locale => frontend_locale} %>
-      </li>
-    <% end %>
-  </ul>
+  <% unless params[:controller] == "refinery/catalogues/catalogues" %>
+    <ul class="dropdown-menu">
+      <% Refinery::I18n.frontend_locales.each do |frontend_locale| %>
+        <li>
+          <% if Refinery::I18n.has_locale?(frontend_locale) %>
+          <%= link_to Refinery::I18n.locales[frontend_locale], {:locale => frontend_locale} %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+  
   <ul id='join'>
     <li><a id="facebook_icon" href="#"></a></li>
     <li><a id="twitter_icon" href="#"></a></li>

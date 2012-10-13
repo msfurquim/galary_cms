@@ -1,25 +1,30 @@
 <%# content_for :body do %>
 <div id="catalogues_index">
-  <h2>catalogue / 目录</h2>
-  <ul id="catalogue_year">
-    <% @years.each do |y| %>
-      <li>
-        <%= link_to y, refinery.catalogues_catalogues_path(:year => y) %>
-      </li>
-    <% end %>
-  </ul>
+  <div id="left-body">
+    <h2>catalogue / 目录</h2>
+    <ul id="catalogue_year">
+      <% @years.each do |y| %>
+        <li>
+          <%= link_to y, refinery.catalogues_catalogues_path(:year => y) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 
-  <ul id="catalogues">
-    <% @catalogues.each do |catalogue| %>
-      <li>
-        <a href="<%= catalogue.attach.present? ? catalogue.attach.url : '#' %>", title: "点击下载">
-          <%= image_fu catalogue.cover, '180x360' %>
-        </a>
-        <p><%=raw catalogue.author %></p>
-        <p><%=raw catalogue.caption %></p>
-      </li>
-    <% end %>
-  </ul>
+  <div id="mid-body">
+    <ul id="catalogues">
+      <% @catalogues.each do |catalogue| %>
+        <li>
+          <a href="<%= catalogue.attach.present? ? catalogue.attach.url : '#' %>", title: "点击下载">
+            <%= image_fu catalogue.cover, '180x360' %>
+          </a>
+          <p><%=raw catalogue.author %></p>
+          <p><%=raw catalogue.caption %></p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <%= render :partial => "/widgets/right_body" %>
 </div>
 <%# end %>
 
