@@ -90,6 +90,11 @@ footer {
 #right-body {
   float: right;
   width: 200px;
+  position: relative;
+  #small-logo{
+    position: absolute;
+    top: -80px;
+  }
 }
 ul#join{
   /*text-align: right;*/
@@ -110,9 +115,11 @@ ul#join{
 }
 /********************* home *********************/
 #home {
+  text-align: center;
   #logo {
     margin: 200px 0 50px;
-    text-align: center;
+    line-height: 96px;
+    font-size: 96px;
     img {
       width: 500px;
       height: 300px;
@@ -121,13 +128,15 @@ ul#join{
   #web_link {
     font-size: 15px;
     margin-bottom: 50px;
-    a{
-      display: inline-block;
+    width: 450px;
+    display: inline-block;
+    a:last-child{
+      float: right;
     }
      a:first-child {
-      margin-left: 240px;
-      width: 380px;
+      float: left
     }
+
   }
 }
 /********************* current & past*********************/
