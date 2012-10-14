@@ -1,0 +1,30 @@
+nl:
+  refinery:
+    plugins:
+      current_shows:
+        title: Current Shows
+    current_shows:
+      admin:
+        current_shows:
+          actions:
+            create_new: Maak een nieuwe Current Show
+            reorder: Wijzig de volgorde van de Current Shows
+            reorder_done: Klaar met het wijzingen van de volgorde van de Current Shows
+          records:
+            title: Current Shows
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Current Shows. Druk op 'Maak een nieuwe Current Show' om de eerste aan te maken.
+          current_show:
+            view_live_html: Bekijk deze current show op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze current show
+            delete: Verwijder deze current show voor eeuwig
+      current_shows:
+        show:
+          other: Andere Current Shows
+  activerecord:
+    attributes:
+      'refinery/current_shows/current_show':
+        begin_date: Begin Date
+        end_date: End Date
+        caption: Caption
+        content: Content

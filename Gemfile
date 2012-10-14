@@ -53,3 +53,4 @@ gem 'refinerycms-i18n', '~> 2.0.0'
 gem 'refinerycms-catalogues', :path => 'vendor/extensions'
 
 # gem 'kaminari'
+gem 'refinerycms-current_shows', :path => 'vendor/extensions'

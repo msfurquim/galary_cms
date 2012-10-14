@@ -3,6 +3,8 @@ PATH
   specs:
     refinerycms-catalogues (1.0)
       refinerycms-core (~> 2.0.8)
+    refinerycms-current_shows (1.0)
+      refinerycms-core (~> 2.0.8)
 
 GEM
   remote: https://rubygems.org/
@@ -190,6 +192,7 @@ DEPENDENCIES
   rails (= 3.2.8)
   refinerycms (~> 2.0.0)
   refinerycms-catalogues!
+  refinerycms-current_shows!
   refinerycms-i18n (~> 2.0.0)
   sass-rails (~> 3.2.3)
   sqlite3
