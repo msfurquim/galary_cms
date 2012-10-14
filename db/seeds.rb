@@ -11,3 +11,6 @@ Refinery::Pages::Engine.load_seed
 
 # Added by Refinery CMS Catalogues extension
 Refinery::Catalogues::Engine.load_seed
+
+# Added by Refinery CMS Current Shows extension
+Refinery::CurrentShows::Engine.load_seed

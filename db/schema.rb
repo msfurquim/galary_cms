@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121013032228) do
+ActiveRecord::Schema.define(:version => 20121014000300) do
 
   create_table "refinery_catalogues", :force => true do |t|
     t.string   "author"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(:version => 20121013032228) do
     t.string   "year"
     t.integer  "cover_id"
     t.integer  "attach_id"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "refinery_current_shows", :force => true do |t|
+    t.date     "begin_date"
+    t.date     "end_date"
+    t.string   "caption"
+    t.text     "content"
     t.integer  "position"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

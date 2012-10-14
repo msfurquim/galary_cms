@@ -1,0 +1,18 @@
+<div id="current-shows">
+  <div id="left-body">
+    <h2>current / 入时</h2>
+    <dl id="current-shows-menu">
+      <% @current_shows.each do |s| %>
+        <dt><%= link_to s.date_title, refinery.current_shows_current_show_path(s) %></dt>
+        <dd><%= s.caption %></dd>
+      <% end %>
+    </dl>
+  </div>
+
+  <div id="mid-body">
+    <div id="current-show-content">
+      <%= raw @current_show.content %>
+    </div>
+  </div>
+  <%#= render :partial => "/widgets/right_body" %>
+</div>

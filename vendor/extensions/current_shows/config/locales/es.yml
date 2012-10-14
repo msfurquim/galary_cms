@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      current_shows:
+        title: Current Shows
+#        article: masculino/femenino
+    current_shows:
+      admin:
+        current_shows:
+          actions:
+            create_new: Crear nuevo current show
+            reorder: Reordenar current shows
+            reorder_done: Reordenación de current shows completada
+          records:
+            title: Current Shows
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay current shows todavía. Pulsa en "Crear nuevo Current Show" para crear tu primer current show.
+          current_show:
+            view_live_html: Ver este current show como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este current show
+            delete: Borrar este current show para siempre
+      current_shows:
+        show:
+          other: Otros current shows
+  activerecord:
+    attributes:
+      'refinery/current_shows/current_show':
+        begin_date: Begin Date
+        end_date: End Date
+        caption: Caption
+        content: Content

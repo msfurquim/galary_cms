@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      current_shows:
+        title: Current Shows
+    current_shows:
+      admin:
+        current_shows:
+          actions:
+            create_new: Lag en ny Current Show
+            reorder: Endre rekkefølgen på Current Shows
+            reorder_done: Ferdig å endre rekkefølgen Current Shows
+          records:
+            title: Current Shows
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Current Shows enda. Klikk på "Lag en ny Current Show" for å legge til din første current show.
+          current_show:
+            view_live_html: Vis hvordan denne current show ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne current show
+            delete: Fjern denne current show permanent
+      current_shows:
+        show:
+          other: Andre Current Shows
+  activerecord:
+    attributes:
+      'refinery/current_shows/current_show':
+        begin_date: Begin Date
+        end_date: End Date
+        caption: Caption
+        content: Content

@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="current_shows">
+    <% @current_shows.each do |current_show| %>
+      <li>
+        <%= link_to current_show.caption, refinery.current_shows_current_show_path(current_show) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

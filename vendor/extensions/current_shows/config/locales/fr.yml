@@ -1,0 +1,30 @@
+fr:
+  refinery:
+    plugins:
+      current_shows:
+        title: Current Shows
+    current_shows:
+      admin:
+        current_shows:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Current Show
+            reorder: Réordonner les Current Shows
+            reorder_done: Fin de réordonnancement des Current Shows
+          records:
+            title: Current Shows
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Current Show. Cliquer sur "Créer un(e) nouve(au/l/lle) Current Show" pour créer votre premi(er/ère) current show.'
+          current_show:
+            view_live_html: Voir ce(t/tte) current show <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) current show
+            delete: Supprimer définitivement ce(t/tte) current show
+      current_shows:
+        show:
+          other: Autres Current Shows
+  activerecord:
+    attributes:
+      'refinery/current_shows/current_show':
+        begin_date: Begin Date
+        end_date: End Date
+        caption: Caption
+        content: Content
