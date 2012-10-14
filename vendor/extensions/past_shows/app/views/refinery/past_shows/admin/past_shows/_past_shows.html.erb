@@ -1,0 +1,2 @@
+<%= will_paginate @past_shows if Refinery::PastShows::Admin::PastShowsController.pageable? %>
+<%= render 'sortable_list' %>

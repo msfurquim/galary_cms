@@ -1,0 +1,29 @@
+nl:
+  refinery:
+    plugins:
+      past_shows:
+        title: Past Shows
+    past_shows:
+      admin:
+        past_shows:
+          actions:
+            create_new: Maak een nieuwe Past Show
+            reorder: Wijzig de volgorde van de Past Shows
+            reorder_done: Klaar met het wijzingen van de volgorde van de Past Shows
+          records:
+            title: Past Shows
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Past Shows. Druk op 'Maak een nieuwe Past Show' om de eerste aan te maken.
+          past_show:
+            view_live_html: Bekijk deze past show op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze past show
+            delete: Verwijder deze past show voor eeuwig
+      past_shows:
+        show:
+          other: Andere Past Shows
+  activerecord:
+    attributes:
+      'refinery/past_shows/past_show':
+        year: Year
+        caption: Caption
+        content: Content

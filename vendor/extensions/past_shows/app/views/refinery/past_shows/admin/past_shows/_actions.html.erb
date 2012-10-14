@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::PastShows::Admin::PastShowsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.past_shows_admin_past_shows_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_past_shows_admin_past_show_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::PastShows::Admin::PastShowsController.sortable? && ::Refinery::PastShows::PastShow.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Past Shows"),
+                 refinery.past_shows_admin_past_shows_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Past Shows"),
+                 refinery.past_shows_admin_past_shows_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

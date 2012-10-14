@@ -1,0 +1,29 @@
+fr:
+  refinery:
+    plugins:
+      past_shows:
+        title: Past Shows
+    past_shows:
+      admin:
+        past_shows:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Past Show
+            reorder: Réordonner les Past Shows
+            reorder_done: Fin de réordonnancement des Past Shows
+          records:
+            title: Past Shows
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Past Show. Cliquer sur "Créer un(e) nouve(au/l/lle) Past Show" pour créer votre premi(er/ère) past show.'
+          past_show:
+            view_live_html: Voir ce(t/tte) past show <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) past show
+            delete: Supprimer définitivement ce(t/tte) past show
+      past_shows:
+        show:
+          other: Autres Past Shows
+  activerecord:
+    attributes:
+      'refinery/past_shows/past_show':
+        year: Year
+        caption: Caption
+        content: Content

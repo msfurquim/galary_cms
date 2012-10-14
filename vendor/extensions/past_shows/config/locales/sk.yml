@@ -1,0 +1,29 @@
+sk:
+  refinery:
+    plugins:
+      past_shows:
+        title: Past Shows
+    past_shows:
+      admin:
+        past_shows:
+          actions:
+            create_new: Pridať Past Show
+            reorder: Preusporiadať Past Shows
+            reorder_done: Koniec radenia Past Shows
+          records:
+            title: Past Shows
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Past Shows. Kliknite na "Pridať Past Show" pre pridanie prvého past show.
+          past_show:
+            view_live_html: Zobraziť náhľad past show<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť past show
+            delete: Zmazať past show
+      past_shows:
+        show:
+          other: Daľšie Past Shows
+  activerecord:
+    attributes:
+      'refinery/past_shows/past_show':
+        year: Year
+        caption: Caption
+        content: Content

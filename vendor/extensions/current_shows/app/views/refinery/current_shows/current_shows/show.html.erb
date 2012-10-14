@@ -1,7 +1,7 @@
-<div id="current-shows">
+<div id="current-shows" class="shows">
   <div id="left-body">
     <h2>current / 入时</h2>
-    <dl id="current-shows-menu">
+    <dl>
       <% @current_shows.each do |s| %>
         <dt><%= link_to s.date_title, refinery.current_shows_current_show_path(s) %></dt>
         <dd><%= s.caption %></dd>
@@ -10,7 +10,7 @@
   </div>
 
   <div id="mid-body">
-    <div id="current-show-content">
+    <div class="show-content">
       <%= raw @current_show.content %>
     </div>
   </div>

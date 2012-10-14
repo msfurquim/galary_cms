@@ -1,0 +1,30 @@
+es:
+  refinery:
+    plugins:
+      past_shows:
+        title: Past Shows
+#        article: masculino/femenino
+    past_shows:
+      admin:
+        past_shows:
+          actions:
+            create_new: Crear nuevo past show
+            reorder: Reordenar past shows
+            reorder_done: Reordenación de past shows completada
+          records:
+            title: Past Shows
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay past shows todavía. Pulsa en "Crear nuevo Past Show" para crear tu primer past show.
+          past_show:
+            view_live_html: Ver este past show como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este past show
+            delete: Borrar este past show para siempre
+      past_shows:
+        show:
+          other: Otros past shows
+  activerecord:
+    attributes:
+      'refinery/past_shows/past_show':
+        year: Year
+        caption: Caption
+        content: Content

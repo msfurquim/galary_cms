@@ -1,0 +1,22 @@
+<div id="past-shows" class="shows">
+  <div id="left-body">
+    <h2>past / 旧的</h2>
+    <dl>
+      <% last = "" -%>
+      <% @past_shows.each do |s| %>
+        <% if last != s.year %>
+          <dt><%= s.year %></dt>
+        <% end -%>
+        <dd><%= link_to s.caption, refinery.past_shows_past_show_path(s) %></dd>
+        <% last = s.year -%>
+      <% end %>
+    </dl>
+  </div>
+
+  <div id="mid-body">
+    <div class="show-content">
+      <%= raw @past_show.content %>
+    </div>
+  </div>
+  <%#= render :partial => "/widgets/right_body" %>
+</div>

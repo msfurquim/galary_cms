@@ -1,0 +1,29 @@
+nb:
+  refinery:
+    plugins:
+      past_shows:
+        title: Past Shows
+    past_shows:
+      admin:
+        past_shows:
+          actions:
+            create_new: Lag en ny Past Show
+            reorder: Endre rekkefølgen på Past Shows
+            reorder_done: Ferdig å endre rekkefølgen Past Shows
+          records:
+            title: Past Shows
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Past Shows enda. Klikk på "Lag en ny Past Show" for å legge til din første past show.
+          past_show:
+            view_live_html: Vis hvordan denne past show ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne past show
+            delete: Fjern denne past show permanent
+      past_shows:
+        show:
+          other: Andre Past Shows
+  activerecord:
+    attributes:
+      'refinery/past_shows/past_show':
+        year: Year
+        caption: Caption
+        content: Content

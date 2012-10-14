@@ -1,0 +1,29 @@
+en:
+  refinery:
+    plugins:
+      past_shows:
+        title: Past Shows
+    past_shows:
+      admin:
+        past_shows:
+          actions:
+            create_new: Add New Past Show
+            reorder: Reorder Past Shows
+            reorder_done: Done Reordering Past Shows
+          records:
+            title: Past Shows
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Past Shows yet. Click "Add New Past Show" to add your first past show.
+          past_show:
+            view_live_html: View this past show live <br/><em>(opens in a new window)</em>
+            edit: Edit this past show
+            delete: Remove this past show forever
+      past_shows:
+        show:
+          other: Other Past Shows
+  activerecord:
+    attributes:
+      'refinery/past_shows/past_show':
+        year: Year
+        caption: Caption
+        content: Content

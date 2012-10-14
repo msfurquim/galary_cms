@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="past_shows">
+    <% @past_shows.each do |past_show| %>
+      <li>
+        <%= link_to past_show.year, refinery.past_shows_past_show_path(past_show) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>
