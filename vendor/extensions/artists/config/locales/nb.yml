@@ -1,0 +1,27 @@
+nb:
+  refinery:
+    plugins:
+      artists:
+        title: Artists
+    artists:
+      admin:
+        artists:
+          actions:
+            create_new: Lag en ny Artist
+            reorder: Endre rekkefølgen på Artists
+            reorder_done: Ferdig å endre rekkefølgen Artists
+          records:
+            title: Artists
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Artists enda. Klikk på "Lag en ny Artist" for å legge til din første artist.
+          artist:
+            view_live_html: Vis hvordan denne artist ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne artist
+            delete: Fjern denne artist permanent
+      artists:
+        show:
+          other: Andre Artists
+  activerecord:
+    attributes:
+      'refinery/artists/artist':
+        name: Name

@@ -1,0 +1,27 @@
+sk:
+  refinery:
+    plugins:
+      artists:
+        title: Artists
+    artists:
+      admin:
+        artists:
+          actions:
+            create_new: Pridať Artist
+            reorder: Preusporiadať Artists
+            reorder_done: Koniec radenia Artists
+          records:
+            title: Artists
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Artists. Kliknite na "Pridať Artist" pre pridanie prvého artist.
+          artist:
+            view_live_html: Zobraziť náhľad artist<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť artist
+            delete: Zmazať artist
+      artists:
+        show:
+          other: Daľšie Artists
+  activerecord:
+    attributes:
+      'refinery/artists/artist':
+        name: Name

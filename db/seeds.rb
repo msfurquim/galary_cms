@@ -17,3 +17,7 @@ Refinery::CurrentShows::Engine.load_seed
 
 # Added by Refinery CMS Past Shows extension
 Refinery::PastShows::Engine.load_seed
+
+# Added by Refinery CMS Artists extension
+Refinery::Artists::Engine.load_seed
+

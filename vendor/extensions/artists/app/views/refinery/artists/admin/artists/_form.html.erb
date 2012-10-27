@@ -1,0 +1,23 @@
+<%= form_for [refinery, :artists_admin, @artist] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @artist,
+              :include_object_name => true %>
+
+
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest'  -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :gender -%>
+    <%= f.text_field :gender, :class => 'larger'  -%>
+
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.artists.admin.artists.artist'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @artist.name) %>
+<% end -%>

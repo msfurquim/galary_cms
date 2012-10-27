@@ -1,0 +1,28 @@
+es:
+  refinery:
+    plugins:
+      artists:
+        title: Artists
+#        article: masculino/femenino
+    artists:
+      admin:
+        artists:
+          actions:
+            create_new: Crear nuevo artist
+            reorder: Reordenar artists
+            reorder_done: Reordenación de artists completada
+          records:
+            title: Artists
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay artists todavía. Pulsa en "Crear nuevo Artist" para crear tu primer artist.
+          artist:
+            view_live_html: Ver este artist como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este artist
+            delete: Borrar este artist para siempre
+      artists:
+        show:
+          other: Otros artists
+  activerecord:
+    attributes:
+      'refinery/artists/artist':
+        name: Name

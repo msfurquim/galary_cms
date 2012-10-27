@@ -1,0 +1,27 @@
+nl:
+  refinery:
+    plugins:
+      artists:
+        title: Artists
+    artists:
+      admin:
+        artists:
+          actions:
+            create_new: Maak een nieuwe Artist
+            reorder: Wijzig de volgorde van de Artists
+            reorder_done: Klaar met het wijzingen van de volgorde van de Artists
+          records:
+            title: Artists
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Artists. Druk op 'Maak een nieuwe Artist' om de eerste aan te maken.
+          artist:
+            view_live_html: Bekijk deze artist op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze artist
+            delete: Verwijder deze artist voor eeuwig
+      artists:
+        show:
+          other: Andere Artists
+  activerecord:
+    attributes:
+      'refinery/artists/artist':
+        name: Name
