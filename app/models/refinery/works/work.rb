@@ -3,9 +3,9 @@ module Refinery
     class Work < Refinery::Core::BaseModel
       self.table_name = 'refinery_works'
 
-      attr_accessible :caption, :dimension, :year, :picture_id, :position, :artist_id
+      attr_accessible :caption, :dimension, :year, :picture_id, :position, :artist_id, :category
 
-      acts_as_indexed :fields => [:caption, :dimension, :year]
+      acts_as_indexed :fields => [:caption, :dimension, :year, :category]
 
       validates :caption, :presence => true, :uniqueness => true
 

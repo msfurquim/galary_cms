@@ -8,9 +8,15 @@
     <%= f.label :artist_id -%>
     <%= f.select :artist_id, ::Refinery::Artists::Artist.all.collect {|p| [ p.name, p.id ]} %>
   </div>
+
   <div class='field'>
     <%= f.label :caption -%>
     <%= f.text_field :caption, :class => 'larger widest'  -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :category -%>
+    <%= f.text_field :category, :class => 'larger'  -%>
   </div>
 
   <div class='field'>
