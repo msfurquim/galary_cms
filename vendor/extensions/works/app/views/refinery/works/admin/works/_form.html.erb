@@ -1,0 +1,42 @@
+<% @work.artist_id ||= params[:artist_id] -%>
+<%= form_for [refinery, :works_admin, @work] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @work,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :artist_id -%>
+    <%= f.select :artist_id, ::Refinery::Artists::Artist.all.collect {|p| [ p.name, p.id ]} %>
+  </div>
+  <div class='field'>
+    <%= f.label :caption -%>
+    <%= f.text_field :caption, :class => 'larger widest'  -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :dimension -%>
+    <%= f.text_field :dimension  -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :year -%>
+    <%= f.text_field :year  -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :picture -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :picture_id,
+               :image => @work.picture,
+               :toggle_image_display => false %>
+
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.works.admin.works.work'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @work.caption) %>
+<% end -%>

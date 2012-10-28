@@ -56,3 +56,5 @@ gem 'refinerycms-catalogues', :path => 'vendor/extensions'
 gem 'refinerycms-current_shows', :path => 'vendor/extensions'
 gem 'refinerycms-past_shows', :path => 'vendor/extensions'
 gem 'refinerycms-artists', :path => 'vendor/extensions'
+
+gem 'refinerycms-works', :path => 'vendor/extensions'

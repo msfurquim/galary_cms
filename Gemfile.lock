@@ -9,6 +9,8 @@ PATH
       refinerycms-core (~> 2.0.8)
     refinerycms-past_shows (1.0)
       refinerycms-core (~> 2.0.8)
+    refinerycms-works (1.0)
+      refinerycms-core (~> 2.0.8)
 
 GEM
   remote: https://rubygems.org/
@@ -200,6 +202,7 @@ DEPENDENCIES
   refinerycms-current_shows!
   refinerycms-i18n (~> 2.0.0)
   refinerycms-past_shows!
+  refinerycms-works!
   sass-rails (~> 3.2.3)
   sqlite3
   therubyracer
