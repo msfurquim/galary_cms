@@ -8,6 +8,8 @@ module Refinery
       def index
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @artist in the line below:
+        # just select one works of each artists
+        @works = ::Refinery::Works::Work.select('distinct(artist_id), *').order('position ASC')
         present(@page)
       end
 

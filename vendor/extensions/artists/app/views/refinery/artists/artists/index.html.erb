@@ -1,11 +1,30 @@
 <% content_for :body do %>
-  <ul id="artists">
-    <% @artists.each do |artist| %>
-      <li>
-        <%= link_to artist.name, refinery.artists_artist_path(artist) %>
-      </li>
-    <% end %>
-  </ul>
+  <div id="left-body">
+    <ul id="artists-nav">
+      <% @artists.each do |artist| %>
+        <li>
+          <%= link_to artist.name, refinery.artists_artist_path(artist) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div id="mid-body">
+    <div class="scrollable" id="scrollable">
+      <div class="items">
+        <% @works.each_with_index do |w, i| %>
+          <div>
+            <%= image_fu w.picture, '550x400' %>
+            <p>
+              <%= "#{w.artist.name} / " if w.artist %>
+              <%= "#{w.caption} / " if w.caption %>
+              <%= "#{w.category} / " if w.category %>
+              <%= "#{w.dimension} / " if w.dimension %>
+              <%= w.year if w.year %>
+            </p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 <% end %>
-
 <%= render '/refinery/content_page' %>
