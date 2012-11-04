@@ -7,6 +7,7 @@ module Refinery
 
       acts_as_indexed :fields => [:caption, :dimension, :year, :category]
 
+      validates :artist_id, :presence => true
       validates :caption, :presence => true, :uniqueness => true
 
       belongs_to :picture, :class_name => '::Refinery::Image'

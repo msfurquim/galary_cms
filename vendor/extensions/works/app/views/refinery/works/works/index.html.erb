@@ -1,11 +1,49 @@
+<% content_for :body_content_title do %>
+  <%= link_to @artist_title, refinery.artists_artists_path %>
+<% end %>
+
 <% content_for :body do %>
-  <ul id="works">
-    <% @works.each do |work| %>
-      <li>
-        <%= link_to work.caption, refinery.works_work_path(work) %>
-      </li>
-    <% end %>
-  </ul>
+  <section>
+    <div id="left-body">
+      <h1><%=raw @artist.name %></h1>
+      <ul>
+        <li><%= link_to "works", refinery.works_works_path()%></li>
+        <li><%= link_to "biografie", "" %></li>
+        <li><%= link_to "exhibitions", "" %></li>
+        <li><%= link_to "catalogue", "" %></li>
+        <li><%= link_to "texts", "" %></li>
+      </ul>
+    </div>
+    <div id="mid-body">
+      <!-- wrapper element for the large image -->
+      <div id="image_wrap">
+        <!-- Initially the image is a simple 1x1 pixel transparent GIF -->
+        <img src="/assets/blank.gif" width="500" height="375" />
+        <p id="active-works-detail"></p>
+      </div>
+      <div id="works-list">
+        <a class="prev browse left"></a>
+        <div class="scrollable" id="works-scrollable">
+          <ul class="items">
+            <% @works.each do |w| -%>
+            <li data-work-id="<%= w.id %>">
+              <%= image_fu w.picture, "150x150" %>
+              <p class="works_detail">
+                <%= w.artist.name %>
+                <%= " / #{w.artist.gender}" if w.artist.gender %>
+                <br/>
+                <%= w.category if w.category %><br/>
+                <%= w.dimension if w.dimension %>
+                <%= " / #{w.year}" if w.year %>
+              </p>
+            </li>
+            <% end %>
+          </ul>
+        </div>
+        <a class="next browse right"></a>
+      </div>
+    </div>
+  </section>
 <% end %>
 
 

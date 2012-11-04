@@ -1,13 +1,13 @@
 <% content_for :body_content_title do %>
-  <%= @artist.name %>
+  <%= link_to @page.custom_slug_or_title, refinery.artists_artists_path %>
 <% end %>
 
 <% content_for :body do %>
   <section>
-    <h1>Name</h1>
-    <p>
-      <%=raw @artist.name %>
-    </p>
+    <h1><%=raw @artist.name %></h1>
+    <ul>
+      <li><%= link_to "works", refinery.works_works_path()%>
+    </ul>
   </section>
 <% end %>
 

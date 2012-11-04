@@ -3,7 +3,7 @@
     <ul id="artists-nav">
       <% @artists.each do |artist| %>
         <li>
-          <%= link_to artist.name, refinery.artists_artist_path(artist) %>
+          <%= link_to artist.name, refinery.works_works_path(:artist_id => artist) %>
         </li>
       <% end %>
     </ul>

@@ -8,6 +8,8 @@ module Refinery
       def index
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @work in the line below:
+        artist_page = ::Refinery::Page.where(:link_url => "/artists").first
+        @artist_title = artist_page.custom_slug_or_title
         present(@page)
       end
 
@@ -22,7 +24,13 @@ module Refinery
     protected
 
       def find_all_works
-        @works = Work.order('position ASC')
+        if params[:artist_id]
+          @artist = ::Refinery::Artists::Artist.find(params[:artist_id])
+        else
+          @artist = ::Refinery::Artists::Artist.first
+        end
+
+        @works = @artist.works.order('position ASC')
       end
 
       def find_page

@@ -1,4 +1,57 @@
 // This is artists.js
 $(function(){
-  $("#scrollable").scrollable({circular: true}).autoscroll({ autoplay: true, interval: 3000 });
+  // aritsts index
+  $("#scrollable").scrollable({circular: true}).autoscroll(
+    {
+      autoplay: true,
+      interval: 3000
+    }
+  );
+
+  // if(window.pathName.match(/^works/)){
+
+  // }
+  // works
+  var root = $("#works-scrollable").scrollable({circular: true});
+  window.api = root.data("scrollable");
+
+  $('#works-list .prev, #works-list .next').click(function(){
+    api.move(2, 2000);
+  });
+
+  $(".items img").click(function() {
+    // see if same thumb is being clicked
+    if ($(this).hasClass("active")) { return; }
+
+    // calclulate large image's URL based on the thumbnail URL (flickr specific)
+    var url = $(this).attr("src")//.replace("_t", "");
+
+    // get handle to element that wraps the image and make it semi-transparent
+    var wrap = $("#image_wrap").fadeTo("medium", 0.5);
+
+    // the large image from www.flickr.com
+    var img = new Image();
+
+
+    // call this function after it's loaded
+    img.onload = function() {
+
+      // make wrapper fully visible
+      wrap.fadeTo("fast", 1);
+
+      // change the image
+      wrap.find("img").attr("src", url);
+
+    };
+
+    // begin loading the image from www.flickr.com
+    img.src = url;
+
+    // activate item
+    $(".items img").removeClass("active");
+    $(this).addClass("active");
+    $('#active-works-detail').html($(this).siblings().html());
+
+  // when page loads simulate a "click" on the first image
+  }).filter(":first").click();
 });

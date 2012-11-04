@@ -8,8 +8,10 @@ module Refinery
 
         def index
           if params[:artist_id]
+            # @artist = ::Refinery::Artists::Artist.find(params[:artist_id])
             paginate_works({:artist_id => params[:artist_id]})
           else
+            # @artist = ::Refinery::Artists::Artist.first
             paginate_works()
           end
         end

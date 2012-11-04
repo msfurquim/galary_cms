@@ -11,6 +11,7 @@
  *= require_self
  *= require_tree .
  */
+@import "common";
 body {
   font-family: Verdana, Arial, sans-serif;;
   font-size: 13px;
@@ -209,26 +210,85 @@ element stays still.
   overflow:hidden;
   width: 660px;
   height:500px;
+  .items {
+    /* this cannot be too large */
+    width:20000em;
+    position:absolute;
+    div, li {
+      float:left;
+      width: 660px;
+      text-align: center;
+      display: block;
+    }
+  }
 }
+/* styling for the image wrapper  */
+#image_wrap {
+  /* dimensions */
+  width:700px;
+  padding:15px 0;
+  display: inline-block;
+  position: relative;
+  /*img{
+    float: left;
+  }*/
+  #active-works-detail{
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+  }
+  /* centered */
+  /*text-align:center;*/
 
-/*
-root element for scrollable items. Must be absolutely positioned
-and it should have a extremely large width to accommodate scrollable
-items.  it's enough that you set width and height for the root element
-and not for this element.
-*/
-.scrollable .items {
-  /* this cannot be too large */
-  width:20000em;
-  position:absolute;
+  /* some "skinning" */
+  /*background-color:#efefef;*/
+  /*border:2px solid #fff;*/
+  /*outline:1px solid #ddd;*/
+  /*-moz-ouline-radius:4px;*/
 }
+a.browse {
+  background: url(/assets/hori_large.png) no-repeat;
+  display: block;
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin: 50px 10px;
+  cursor: pointer;
+  font-size: 1px;
+}
+a.left {
+  margin-left: 0px;
+}
+a.right {
+  background-position: 0 -30px;
+  clear: right;
+  margin-right: 0px;
+}
+#works-scrollable{
+  width: 550px;
+  height: 150px;
+  float: left;
 
-/*
-a single item. must be floated in horizontal scrolling.  typically,
-this element is the one that *you* will style the most.
-*/
-.items div {
-  float:left;
-  width: 660px;
-  text-align: center;
+  /*ul{ padding-left: 0; }*/
+
+  li{
+    width: 150px;
+    margin: 0 15px;
+    &:first-child{
+      margin-left: 0;
+    }
+    img{
+      padding: 2px;
+      &.active{
+        border: 2px solid black;
+        @include border-radius(5px);
+      }
+    }
+    .works_detail{
+      display: none;
+    }
+  }
+}
+#works-list{
+  margin-left: -60px;
 }
