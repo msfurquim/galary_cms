@@ -10,6 +10,7 @@ module Refinery
       validates :name, :presence => true, :uniqueness => true
 
       has_many :works, :class_name => '::Refinery::Works::Work'
+      has_one :biography, :class_name => '::Refinery::Biographies::Biography'
     end
   end
 end
