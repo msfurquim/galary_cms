@@ -3,8 +3,6 @@ PATH
   specs:
     refinerycms-artists (1.0)
       refinerycms-core (~> 2.0.8)
-    refinerycms-biographies (1.0)
-      refinerycms-core (~> 2.0.8)
     refinerycms-catalogues (1.0)
       refinerycms-core (~> 2.0.8)
     refinerycms-current_shows (1.0)
@@ -200,7 +198,6 @@ DEPENDENCIES
   rails (= 3.2.8)
   refinerycms (~> 2.0.0)
   refinerycms-artists!
-  refinerycms-biographies!
   refinerycms-catalogues!
   refinerycms-current_shows!
   refinerycms-i18n (~> 2.0.0)

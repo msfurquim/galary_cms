@@ -58,4 +58,3 @@ gem 'refinerycms-past_shows', :path => 'vendor/extensions'
 gem 'refinerycms-artists', :path => 'vendor/extensions'
 
 gem 'refinerycms-works', :path => 'vendor/extensions'
-gem 'refinerycms-biographies', :path => 'vendor/extensions'
