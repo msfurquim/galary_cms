@@ -21,9 +21,5 @@ Refinery::PastShows::Engine.load_seed
 # Added by Refinery CMS Artists extension
 Refinery::Artists::Engine.load_seed
 
-
 # Added by Refinery CMS Works extension
 Refinery::Works::Engine.load_seed
-
-# Added by Refinery CMS Biographies extension
-Refinery::Biographies::Engine.load_seed
