@@ -4,16 +4,7 @@
 
 <% content_for :body do %>
   <section>
-    <div id="left-body">
-      <h1><%=raw @artist.name %></h1>
-      <ul>
-        <li><%= link_to "works", refinery.works_works_path()%></li>
-        <li><%= link_to "biografie", "" %></li>
-        <li><%= link_to "exhibitions", "" %></li>
-        <li><%= link_to "catalogue", "" %></li>
-        <li><%= link_to "texts", "" %></li>
-      </ul>
-    </div>
+    <%= render :partial => 'widgets/artist_left_body' %>
     <div id="mid-body">
       <!-- wrapper element for the large image -->
       <div id="image_wrap">

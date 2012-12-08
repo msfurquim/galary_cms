@@ -292,3 +292,11 @@ a.right {
 #works-list{
   margin-left: -60px;
 }
+/****************** artist, works, biographies, exhibitions *****************/
+.artist-menu{
+  line-height: 30px;
+  font-size: 14px;
+  li.current{
+    font-weight: bold;
+  }
+}

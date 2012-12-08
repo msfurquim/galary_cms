@@ -4,7 +4,7 @@
   end
 
   path = request.path.sub("//", "/")
-  if !!local_assigns[:apply_css] and menu_branch.menu_match == "^/artists(/|/.+?|)$" and path =~ Regexp.new("^/works(/|/.+?|)$")
+  if !!local_assigns[:apply_css] and menu_branch.menu_match == "^/artists(/|/.+?|)$" and path =~ Regexp.new("^/works(/|/.+?|)|/biographies(/|/.+?|)$")
     css = "class='#{Refinery::Core.menu_css[:selected]}'".html_safe
   end
 -%>

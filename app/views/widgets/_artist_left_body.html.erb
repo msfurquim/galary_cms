@@ -1,0 +1,17 @@
+<%#= params[:controller] %>
+<div id="left-body">
+  <h1><%=raw @artist.name %></h1>
+  <ul class="artist-menu">
+    <li class="<%= params[:controller] == 'refinery/works/works' ? 'current': '' %>">
+      <%= link_to "works", refinery.works_works_path(:artist_id => @artist.id)%>
+    </li>
+    <% if @artist.biography -%>
+      <li class="<%= params[:controller] == 'refinery/biographies/biographies' ? 'current': '' %>">
+        <%= link_to "biografie", refinery.biographies_biography_path(@artist.biography) %>
+      </li>
+    <% end -%>
+    <li><%= link_to "exhibitions", "" %></li>
+    <li><%#= link_to "catalogue", "" %></li>
+    <li><%#= link_to "texts", "" %></li>
+  </ul>
+</div>
