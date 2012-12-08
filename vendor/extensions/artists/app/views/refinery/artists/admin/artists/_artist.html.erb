@@ -6,7 +6,11 @@
     &nbsp;&nbsp;&nbsp;&nbsp;
     <%= link_to 'Works', refinery.works_admin_works_path(:artist_id => artist.id) %>
     &nbsp;&nbsp;&nbsp;&nbsp;
-    <%#= link_to 'Biografie', refinery.biographies_admin_biographies_path(:artist_id => artist.id) %>
+    <% if artist.biography.blank? -%>
+      <%= link_to 'Biografie', refinery.new_biographies_admin_biography_path(:artist_id => artist.id) %>
+    <% else -%>
+      <%= link_to 'Biografie', refinery.edit_biographies_admin_biography_path(artist.biography, :artist_id => artist.id) %>
+    <% end %>
 
   </span>
   <span class='actions'>

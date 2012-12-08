@@ -1,0 +1,28 @@
+en:
+  refinery:
+    plugins:
+      biographies:
+        title: Biographies
+    biographies:
+      admin:
+        biographies:
+          actions:
+            create_new: Add New Biography
+            reorder: Reorder Biographies
+            reorder_done: Done Reordering Biographies
+          records:
+            title: Biographies
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Biographies yet. Click "Add New Biography" to add your first biography.
+          biography:
+            view_live_html: View this biography live <br/><em>(opens in a new window)</em>
+            edit: Edit this biography
+            delete: Remove this biography forever
+      biographies:
+        show:
+          other: Other Biographies
+  activerecord:
+    attributes:
+      'refinery/biographies/biography':
+        artist_id: Artist
+        content: Content

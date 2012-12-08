@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121028070047) do
+ActiveRecord::Schema.define(:version => 20121208035149) do
 
   create_table "refinery_artists", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,22 @@ ActiveRecord::Schema.define(:version => 20121028070047) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "gender"
+  end
+
+  create_table "refinery_artists_biographies", :force => true do |t|
+    t.text     "content"
+    t.integer  "artist_id"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "refinery_biographies", :force => true do |t|
+    t.integer  "artist_id"
+    t.text     "content"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "refinery_catalogues", :force => true do |t|

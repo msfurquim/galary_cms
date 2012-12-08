@@ -1,0 +1,28 @@
+nb:
+  refinery:
+    plugins:
+      biographies:
+        title: Biographies
+    biographies:
+      admin:
+        biographies:
+          actions:
+            create_new: Lag en ny Biography
+            reorder: Endre rekkefølgen på Biographies
+            reorder_done: Ferdig å endre rekkefølgen Biographies
+          records:
+            title: Biographies
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Biographies enda. Klikk på "Lag en ny Biography" for å legge til din første biography.
+          biography:
+            view_live_html: Vis hvordan denne biography ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne biography
+            delete: Fjern denne biography permanent
+      biographies:
+        show:
+          other: Andre Biographies
+  activerecord:
+    attributes:
+      'refinery/biographies/biography':
+        artist_id: Artist
+        content: Content

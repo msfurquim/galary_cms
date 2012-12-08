@@ -1,0 +1,33 @@
+<% content_for :body_content_title do %>
+  <%= @biography.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Artist</h1>
+    <p>
+      <%=raw @biography.artist_id %>
+    </p>
+  </section>
+  <section>
+    <h1>Content</h1>
+    <p>
+      <%=raw @biography.content %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="biographies">
+      <% @biographies.each do |biography| %>
+        <li>
+          <%= link_to biography.title, refinery.biographies_biography_path(biography) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

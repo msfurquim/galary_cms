@@ -7,9 +7,13 @@ module Refinery
 
       acts_as_indexed :fields => [:content]
 
-      validates :content, :presence => true, :uniqueness => true
+      validates :content, :presence => true
 
       belongs_to :artist, :class_name => '::Refinery::Artists::Artist'
+
+      def title
+        self.artist.name + "\'s Biography"
+      end
     end
   end
 end

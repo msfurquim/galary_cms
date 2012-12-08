@@ -1,0 +1,28 @@
+nl:
+  refinery:
+    plugins:
+      biographies:
+        title: Biographies
+    biographies:
+      admin:
+        biographies:
+          actions:
+            create_new: Maak een nieuwe Biography
+            reorder: Wijzig de volgorde van de Biographies
+            reorder_done: Klaar met het wijzingen van de volgorde van de Biographies
+          records:
+            title: Biographies
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Biographies. Druk op 'Maak een nieuwe Biography' om de eerste aan te maken.
+          biography:
+            view_live_html: Bekijk deze biography op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze biography
+            delete: Verwijder deze biography voor eeuwig
+      biographies:
+        show:
+          other: Andere Biographies
+  activerecord:
+    attributes:
+      'refinery/biographies/biography':
+        artist_id: Artist
+        content: Content
