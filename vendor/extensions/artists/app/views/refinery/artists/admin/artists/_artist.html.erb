@@ -12,6 +12,13 @@
       <%= link_to 'Biografie', refinery.edit_biographies_admin_biography_path(artist.biography, :artist_id => artist.id) %>
     <% end %>
 
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <% if artist.exhibition.blank? -%>
+      <%= link_to 'Exhibitions', refinery.new_exhibitions_admin_exhibition_path(:artist_id => artist.id) %>
+    <% else -%>
+      <%= link_to 'Exhibitions', refinery.edit_exhibitions_admin_exhibition_path(artist.exhibition, :artist_id => artist.id) %>
+    <% end %>
+
   </span>
   <span class='actions'>
     <%= link_to refinery_icon_tag("application_go.png"), refinery.artists_artist_path(artist),

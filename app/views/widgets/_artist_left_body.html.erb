@@ -10,7 +10,9 @@
         <%= link_to "biografie", refinery.biographies_biography_path(@artist.biography) %>
       </li>
     <% end -%>
-    <li><%= link_to "exhibitions", "" %></li>
+    <li class="<%= params[:controller] == 'refinery/exhibitions/exhibitions' ? 'current': '' %>">
+      <%= link_to "exhibitions", refinery.exhibitions_exhibition_path(@artist.exhibition) %>
+    </li>
     <li><%#= link_to "catalogue", "" %></li>
     <li><%#= link_to "texts", "" %></li>
   </ul>

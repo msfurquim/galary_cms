@@ -9,6 +9,8 @@ PATH
       refinerycms-core (~> 2.0.8)
     refinerycms-current_shows (1.0)
       refinerycms-core (~> 2.0.8)
+    refinerycms-exhibitions (1.0)
+      refinerycms-core (~> 2.0.8)
     refinerycms-past_shows (1.0)
       refinerycms-core (~> 2.0.8)
     refinerycms-works (1.0)
@@ -203,6 +205,7 @@ DEPENDENCIES
   refinerycms-biographies!
   refinerycms-catalogues!
   refinerycms-current_shows!
+  refinerycms-exhibitions!
   refinerycms-i18n (~> 2.0.0)
   refinerycms-past_shows!
   refinerycms-works!

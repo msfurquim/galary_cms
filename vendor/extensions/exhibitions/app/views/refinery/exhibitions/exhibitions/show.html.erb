@@ -1,0 +1,15 @@
+<% content_for :body_content_title do %>
+  <%= link_to "artists / 艺术家", refinery.artists_artists_path %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <%= render :partial => 'widgets/artist_left_body' %>
+    <div id="mid-body">
+      <h2><%= @artist.name %></h2>
+      <%= @exhibition.content.html_safe %>
+    </div>
+
+  </section>
+<% end %>
+<%= render '/refinery/content_page' %>

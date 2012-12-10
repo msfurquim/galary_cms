@@ -26,3 +26,6 @@ Refinery::Works::Engine.load_seed
 
 # Added by Refinery CMS Biographies extension
 Refinery::Biographies::Engine.load_seed
+
+# Added by Refinery CMS Exhibitions extension
+Refinery::Exhibitions::Engine.load_seed
